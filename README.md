@@ -1,2 +1,0 @@
-# bash
-Short three test
