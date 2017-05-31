@@ -74,10 +74,21 @@ overovani
 
 #exoticka syntaxe
 echo -e "\e[96mOsmy test\e[0m"
-./verzeWildfly.sh 10.1.0.Final == $(../vystup) > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
+./verzeWildfly.sh "10.1.0.Final" "../vystup >" ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
 
 overovani
 
+#spatne spusteni skriptu
+echo -e "\e[96mDevaty test\e[0m"
+./verzeWildfly.sh: 10.1.0.Final ../vystup > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
+
+overovani
+
+#nadbytecne ostre zavorky
+echo -e "\e[96mDesaty test\e[0m"
+./verzeWildfly.sh 10.1.0.Final <../vystup> > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
+
+overovani
 
 cd ../vystup
 rm -rf standardniVystup.txt
