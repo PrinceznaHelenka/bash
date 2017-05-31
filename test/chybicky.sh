@@ -66,6 +66,13 @@ echo -e "\e[96mTreti test\e[0m"
 overovani
 
 
+#exoticka syntaxe
+echo -e "\e[96mTreti test\e[0m"
+./verzeWildfly.sh 10.1.0.Final $(../vystup) > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
+
+overovani
+
+
 cd ../vystup
 rm -rf standardniVystup.txt
 rm -rf chybovyVystup.txt
