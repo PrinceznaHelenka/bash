@@ -48,27 +48,33 @@ echo -e "\e[96mTreti test\e[0m"
 overovani
 
 #je zadano pouze spusteni wildfly a zadny parametr
-echo -e "\e[96mTreti test\e[0m"
+echo -e "\e[96mCtvrty test\e[0m"
 ./verzeWildfly.sh > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
 
 overovani
 
 #je zadano vice parametru, nez je treba
-echo -e "\e[96mTreti test\e[0m"
+echo -e "\e[96mPaty test\e[0m"
 ./verzeWildfly.sh 10.1.0.Final ../vystup clear > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
 
 overovani
 
 #exoticka syntaxe
-echo -e "\e[96mTreti test\e[0m"
+echo -e "\e[96mSesty test\e[0m"
 ./verzeWildfly.sh $(10.1.0.Final) ../vystup > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
 
 overovani
 
 
 #exoticka syntaxe
-echo -e "\e[96mTreti test\e[0m"
+echo -e "\e[96mSedmy test\e[0m"
 ./verzeWildfly.sh 10.1.0.Final $(../vystup) > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
+
+overovani
+
+#exoticka syntaxe
+echo -e "\e[96mOsmy test\e[0m"
+./verzeWildfly.sh 10.1.0.Final == $(../vystup) > ../vystup/standardniVystup.txt 2> ../vystup/chybovyVystup.txt
 
 overovani
 
