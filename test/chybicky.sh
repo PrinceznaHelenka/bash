@@ -7,26 +7,26 @@ echo -e "\e[105mTed se dejou kouzla
 
 overovani () 
 {
-cd ../vystup
+	cd ../vystup
 
-rozdily1=$(diff standardniVystup.txt vzor1.txt) 
-if [ "$rozdily1" = "" ] 
-then
-    echo -e "\e[92mVse bezi spravne.\e[0m"
+	rozdily1=$(diff standardniVystup.txt vzor1.txt) 
+	if [ "$rozdily1" = "" ] 
+	then
+		  echo -e "\e[92mVse bezi spravne.\e[0m"
 
-else 
-    echo -e "\e[91mVe standardnim vystupu je neco navic.\e[0m"
-fi
+	else 
+		  echo -e "\e[91mVe standardnim vystupu je neco navic.\e[0m"
+	fi
 
-rozdily2=$(diff chybovyVystup.txt vzor2.txt) 
-if [ "$rozdily2" = "" ] 
-then
-    echo -e "\e[92mV chybovem vzstupu jsem nenasla zadnou chybu.\e[0m"
-else 
-    echo -e "\e[91mChybovy vystup hlasi chybu.\e[0m"
-fi
+	rozdily2=$(diff chybovyVystup.txt vzor2.txt) 
+	if [ "$rozdily2" = "" ] 
+	then
+		  echo -e "\e[92mV chybovem vzstupu jsem nenasla zadnou chybu.\e[0m"
+	else 
+		  echo -e "\e[91mChybovy vystup hlasi chybu.\e[0m"
+	fi
 
-cd ../src
+	cd ../src
 }
 
 #vse by melo bezet spravne
