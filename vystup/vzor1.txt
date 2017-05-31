@@ -1,0 +1,2 @@
+[92mTed se zjistuje, jaka je aktualni verze wildfly.[0m
+10.1.0.Final
