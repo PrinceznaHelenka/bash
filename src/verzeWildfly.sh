@@ -13,7 +13,7 @@ fi
 if ! [ -e $2/wildfly ] 
 then
      cd $2 		
-     wget http://download.jboss.org/wildfly/$1/wildfly-$1.zip 2> /dev/null
+     wget http://download.jboss.org/wildfly/$1/wildfly-$1.zip 
 
 	if ! [ $? == 0 ]
 	  then  
