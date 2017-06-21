@@ -6,7 +6,7 @@ then
 	echo -e "\e[92mTed se zjistuje, jaka je aktualni verze wildfly.\e[0m" 
 else
 	echo -e "\e[96mZadej spravnou slozku!\e[0m"
-	exit 
+	exit 1
 fi
 
 
@@ -18,7 +18,7 @@ then
 	if ! [ $? == 0 ]
 	  then  
 		echo -e "\e[96mZadej spravnou verzi!\e[0m"
-		exit
+		exit 1
 	fi  
 
      unzip -q wildfly-$1.zip -d wildfly 
